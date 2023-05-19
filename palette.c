@@ -3,14 +3,14 @@
 /*
  * [Pixel Color Value Memory (used to identify the pixel color of sprites and tiles performed by "bitmap2buffer")]
  *
- * Extra Color 2 (visible as red)		-> #a80020	(168, 0, 32)
- * Extra Color 1 (visible as marron)	-> #881400	(136, 20, 0)
- * white			-> #ffffff	(255, 255, 255)
- * white gray		-> #e6e6e6	
- * light gray		-> #bcbcbc	(188, 188, 188)
- * gray				-> #7c7c7c	(124, 124, 124)
- * dark gray		-> #484848	(72, 72, 72)
- * black			-> #000000	(0, 0, 0)
+ * Extra Color 2 (red)	-> #a80020	rgb(168, 0, 32)
+ * Extra Color 1 (brown)-> #881400	rgb(136, 20, 0)
+ * white		-> #ffffff	rgb(255, 255, 255)
+ * white gray		-> #e6e6e6	rgb(230, 230, 230)
+ * light gray		-> #bcbcbc	rgb(188, 188, 188)
+ * gray			-> #7c7c7c	rgb(124, 124, 124)
+ * dark gray		-> #484848	rgb(72, 72, 72)
+ * black		-> #000000	rgb(0, 0, 0)
  * */
 
 uint8_t GRAYSCALE[GRAYSCALE_LEN][RGBA_LEN] = {
@@ -21,7 +21,7 @@ uint8_t GRAYSCALE[GRAYSCALE_LEN][RGBA_LEN] = {
 	{0xe6, 0xe6, 0xe6, 0xff},	// 0x4 (5) white gray
 	{0xff, 0xff, 0xff, 0xff},	// 0x5 (6) white
 	{0xa8, 0x10, 0x00, 0xff},	// 0x6 (7) EXTRA COLOR (NOT GRAYSCALE) red
-	{0x88, 0x14, 0x00, 0xff}	// 0x7 (8) EXTRA COLOR (NOT GRAYSCALE) dark red (or marron)
+	{0x88, 0x14, 0x00, 0xff}	// 0x7 (8) EXTRA COLOR (NOT GRAYSCALE) (brown)
 };
 
 // TODO: Indicar el nombre de todos los colores 
