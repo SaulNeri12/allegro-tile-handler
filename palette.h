@@ -5,16 +5,15 @@
 #include<stdint.h>
 
 #define PAL_LEN			56
-#define GRAYSCALE_LEN	8
+#define GRAYSCALE_LEN		8
 #define RGBA_LEN		4
-// for access to color array
+// used for array color access
 #define RGBA_RED		0
 #define RGBA_GREEN		1
 #define RGBA_BLUE		2
 #define RGBA_ALPHA		3
 
 // NES color palette
-
 enum PAL_COLOR_ID {
 	BLACK = 0x00,
 	WHITE = 0x01,
@@ -73,8 +72,7 @@ enum PAL_COLOR_ID {
 	GRAY_2 = 0x36	
 };
 
-
-uint8_t GRAYSCALE[GRAYSCALE_LEN][RGBA_LEN];
-uint8_t PALETTE[PAL_LEN][RGBA_LEN];
+extern uint8_t GRAYSCALE[GRAYSCALE_LEN][RGBA_LEN];
+extern uint8_t PALETTE[PAL_LEN][RGBA_LEN];
 
 #endif
