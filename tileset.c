@@ -30,7 +30,7 @@ uint8_t *tileset_get_tile_by_row_col(Tileset *tileset, uint8_t row, uint8_t col)
 	uint16_t start_x = col * tileset->tile_width;
 	uint16_t start_y = row * tileset->tile_height;
 
-	uint8_t *buf = al_malloc(sizeof(uint8_t) * (tileset->tile_width * tileset->tile_height));
+	uint8_t *buf = (uint8_t*) al_malloc(sizeof(uint8_t) * (tileset->tile_width * tileset->tile_height));
 
 	if (!buf) {
 		fprintf(stderr, "tileset.tileset_get_tile_by_row_col [Line #%d] -> couldn't create tile buffer (malloc)!!!\n", __LINE__);
