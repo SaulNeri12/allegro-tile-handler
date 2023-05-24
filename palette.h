@@ -5,7 +5,7 @@
 #include<stdint.h>
 
 #define PAL_LEN			56
-#define GRAYSCALE_LEN		8
+#define GRAYSCALE_LEN	8
 #define RGBA_LEN		4
 // used for array color access
 #define RGBA_RED		0
