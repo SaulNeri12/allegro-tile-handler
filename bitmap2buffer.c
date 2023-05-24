@@ -4,14 +4,14 @@ uint8_t* bitmap_to_tileset_buffer(const char *filename) {
 	ALLEGRO_BITMAP *bmp = al_load_bitmap(filename);
 
 	if (!bmp) {
-		fprintf(stderr, "[Bitmap2Buffer.bitmap_to_tileset] -> file not found!\n");
+		fprintf(stderr, "[Bitmap2Buffer.bitmap_to_tileset][Line: %d] -> file not found!\n", __LINE__);
 		exit(EXIT_FAILURE);
 	}
 
 	uint16_t width = al_get_bitmap_width(bmp);
 	uint16_t height = al_get_bitmap_height(bmp);
 
-	uint8_t *buf = al_calloc(width * height, sizeof(uint8_t));
+	uint8_t *buf = (uint8_t*) al_calloc(width * height, sizeof(uint8_t));
 
 	al_lock_bitmap(bmp, al_get_bitmap_format(bmp), ALLEGRO_LOCK_READONLY);
 	
